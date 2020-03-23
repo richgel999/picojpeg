@@ -30,6 +30,8 @@ Here's picojpeg working on a 6809 CPU (a Tandy Color Computer 3), compiled using
 
 ## Release History
 
+* v1.1 - 3/23/2020: Fixed unsigned/signed issue in macro, fixed overflow issue in decoder preventing the decode of very large JPEG's
+
 * v1.1 - Feb. 19, 2013: Dual licensed as both public domain and (where public domain is not acceptable) the MIT license. Please contact me for the source drop.
 * v1.1 - Feb. 9, 2013: Optimized the IDCT row/col loops to avoid the full inverse transform when only the DC component is non-zero, added "reduce" mode for fast 1/8th res decoding, better error handling, added support for H2V1/H1V2 chroma subsampling factors, ported jpg2tga.cpp to jpg2jpg.c (so all modules are written in plain C now), added code to compare picojpeg's decoded output vs. stb_image'c for testing/verification.
 * v1.0 - Nov. 10, 2010: Initial release. Derived from the original version which was tested on a PIC18F series CPU.
